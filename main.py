@@ -8,13 +8,13 @@ import machine
 import micropython
 import network
 import esp
-#import dht
-esp.osdebug(None)
+
 import gc
+from config import *
+
+esp.osdebug(None)
 gc.collect()
 
-SSID='vpnet24'
-PSW='UlitsaBluxera'
 mqtt_server = '192.168.17.5'
 topic_sub = b'Motion/EntryMotion/STATE'
 topic_pub = b'Doorbell/STATE'
